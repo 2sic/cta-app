@@ -1,0 +1,108 @@
+@media all {
+  .co-cta-wrapper {
+    margin: 0;
+    padding: 90px 0;
+
+    // &.co-cta-background-primary {
+    //   background: rgba($primary, 1.0) url(../../images/bg-hexagon-darkblue.png) center center repeat fixed;
+    // }
+  
+    // &.co-cta-background-lightgrey {
+    //   background: rgba(228,224,218,.4) url(../../images/bg-hexagon.png) center center repeat fixed;
+    // }
+  
+    &.co-cta-backgroundimage {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .co-cta {
+      padding: 32px 0;
+
+      .co-cta-text {
+        font-size: 30px;
+
+        p {
+          font-size: 30px;
+          line-height: 42px;
+        }
+      }
+
+      .co-cta-btn {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        height: 50px;
+        padding: 0 32px;
+        border-radius: 4px;
+        color: $white;
+
+        &.co-cta-btn-first {
+          background-color: #DF1A22;
+          border-color: #DF1A22;
+        }
+        
+        &.co-cta-btn-second {
+          color: #343a40;
+          border-color: #343a40;
+
+          &:hover {
+            color: $white;
+            background-color: #343a40;
+            border-color: #343a40;
+          }
+        }
+      }
+
+      
+
+      &.co-cta-text-bright {
+        color: $white;
+  
+        .co-cta-btn-second {
+          border-color: $white;
+          color: $white;
+        }
+      }
+  
+      &.co-cta-text-dark {
+        color: $black;
+  
+        .co-cta-btn {
+          &.co-cta-btn-first {
+            color: $white;
+          }
+
+          color: $black;
+        }
+      }
+    }
+
+    .co-cta-btn-first {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22);
+    }
+  }
+
+  .co-cta-fixed {
+    position: relative;
+
+    .cta-btn-fixed {
+      position: fixed;
+      top: 50%;
+      right: -19px;
+      padding: 0 16px;
+      height: 60px;
+      line-height: 50px;
+      transform: translateY(-50%) rotate(-90deg);
+      background-color: $white;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 0, 0, 0.22);
+      outline: none;
+    }
+  }
+  
+}

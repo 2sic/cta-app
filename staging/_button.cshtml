@@ -1,0 +1,23 @@
+@{
+  string Edition = PageData["Edition"];
+}
+
+<div class="co-container-outer co-cta-wrapper sc-element @Presentation.Background"
+  style='
+    @(Presentation.Background == "co-cta-backgroundimage" && !String.IsNullOrEmpty(Presentation.BackgroundImage) 
+      ? "background-image: url('" + Presentation.BackgroundImage + "?w=1920&amp;scale=both&amp;quality=70&amp;anchor=" + Presentation.CropAnchor + "')"
+      : "")
+  '>
+  @Edit.Toolbar(Content)
+  <div class="co-container-inner container-fluid">
+    <div class='row @(Presentation.TextAlignment == "text-center" ? "justify-content-center" : "")'>
+      <div class="col-6">
+        <div class="co-cta @Presentation.TextColor @Presentation.TextAlignment">
+          @RenderPage("shared/_cta-content.cshtml")        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="@App.Path/@Edition/dist/style.min.css" data-enableoptimizations="true">

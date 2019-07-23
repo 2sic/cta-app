@@ -1,0 +1,7 @@
+@foreach (var button in Content.Buttons)
+{
+  <div class="co-cta-fixed sc-element">
+    @Edit.Toolbar(button)
+    <a href="@button.ButtonLink" class='btn cta-btn-fixed' target="@button.ButtonTarget">@button.ButtonText</a>
+  </div>
+}
