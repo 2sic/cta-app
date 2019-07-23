@@ -7,6 +7,10 @@
   .co-cta-wrapper {
     margin: 0;
     padding: 90px 0; }
+    .co-cta-wrapper.co-cta-background-primary {
+      background: #5c4384 url(images/bg-hexagon-darkblue.png) center center repeat fixed; }
+    .co-cta-wrapper.co-cta-background-lightgrey {
+      background: rgba(228, 224, 218, 0.4) url(images/bg-hexagon.png) center center repeat fixed; }
     .co-cta-wrapper.co-cta-backgroundimage {
       background-size: cover;
       background-repeat: no-repeat; }
