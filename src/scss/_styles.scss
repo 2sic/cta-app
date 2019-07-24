@@ -1,7 +1,14 @@
 @media all {
   .co-cta-wrapper {
     margin: 0;
-    padding: 90px 0;
+    padding: $grid-gutter-width*2 0 $grid-gutter-width 0;
+    @include media-breakpoint-up(md) {
+      padding: $grid-gutter-width*2 $grid-gutter-width $grid-gutter-width $grid-gutter-width;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: $grid-gutter-width*3;
+    }
+    
 
     &.co-cta-background-primary {
       background: rgba($primary, 1.0) url(../../images/bg-hexagon-darkblue.png) center center repeat fixed;
@@ -17,14 +24,30 @@
     }
 
     .co-cta {
-      padding: 32px 0;
-
       .co-cta-text {
-        font-size: 30px;
+        font-size: 20px;
+        line-height: 29px;
+        padding: 16px 0;
 
-        p {
+        @include media-breakpoint-up(md) {
+          padding: 32px 0;
+        }
+
+        @include media-breakpoint-up(md) {
           font-size: 30px;
           line-height: 42px;
+        }
+
+        p {
+          font-size: 20px;
+          line-height: 29px;
+          margin-bottom: 0;
+
+          @include media-breakpoint-up(md) {
+            font-size: 30px;
+            line-height: 42px;
+          }
+          
         }
       }
 
@@ -32,13 +55,19 @@
         display: inline-block;
         text-decoration: none;
         font-size: 14px;
-        line-height: 50px;
+        line-height: 40px;
         font-weight: 700;
         text-transform: uppercase;
-        height: 50px;
-        padding: 0 32px;
+        height: 40px;
+        padding: 0 16px;
         border-radius: 4px;
         color: $white;
+
+        @include media-breakpoint-up(md) {
+          line-height: 50px;
+          height: 50px;
+          padding: 0 32px;
+        }
 
         &.co-cta-btn-first {
           background-color: #DF1A22;
