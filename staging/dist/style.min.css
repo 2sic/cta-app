@@ -5,102 +5,115 @@
 */
 @media all {
   .co-cta-wrapper {
-    margin: 0;
-    padding: 60px 0 30px 0; } }
-  @media all and (min-width: 768px) {
-    .co-cta-wrapper {
-      padding: 60px 30px 30px 30px; } }
-  @media all and (min-width: 992px) {
-    .co-cta-wrapper {
-      padding: 90px; } }
-
-@media all {
+    margin-bottom: 60px; }
     .co-cta-wrapper.co-cta-background-primary {
       background: #5c4384 url(images/bg-hexagon-darkblue.png) center center repeat fixed; }
     .co-cta-wrapper.co-cta-background-lightgrey {
       background: rgba(228, 224, 218, 0.4) url(images/bg-hexagon.png) center center repeat fixed; }
-    .co-cta-wrapper.co-cta-backgroundimage {
+    .co-cta-wrapper.co-cta-backgroundimage, .co-cta-wrapper.co-cta-backgroundimage-overlay {
       background-size: cover;
-      background-repeat: no-repeat; }
-    .co-cta-wrapper .co-cta .co-cta-text {
-      font-size: 20px;
-      line-height: 29px;
-      padding: 16px 0; } }
+      background-repeat: no-repeat;
+      background-position: center; }
+    .co-cta-wrapper .backgroundimage-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(92, 67, 132, 0.3); }
+    .co-cta-wrapper .co-cta {
+      padding-top: 30px;
+      padding-bottom: calc(30px - 16px); } }
     @media all and (min-width: 768px) {
-      .co-cta-wrapper .co-cta .co-cta-text {
-        padding: 32px 0; } }
-    @media all and (min-width: 768px) {
-      .co-cta-wrapper .co-cta .co-cta-text {
-        font-size: 30px;
-        line-height: 42px; } }
+      .co-cta-wrapper .co-cta {
+        padding-top: 60px;
+        padding-bottom: calc(30px - 16px); } }
+    @media all and (min-width: 992px) {
+      .co-cta-wrapper .co-cta {
+        padding-top: 90px;
+        padding-bottom: calc(30px*3 - 16px); } }
 
 @media all {
-      .co-cta-wrapper .co-cta .co-cta-text p {
+      .co-cta-wrapper .co-cta h2 {
+        margin-bottom: 16px; }
+      .co-cta-wrapper .co-cta .co-cta-text {
         font-size: 20px;
-        line-height: 29px;
-        margin-bottom: 0; } }
+        line-height: 29px; } }
       @media all and (min-width: 768px) {
-        .co-cta-wrapper .co-cta .co-cta-text p {
+        .co-cta-wrapper .co-cta .co-cta-text {
           font-size: 30px;
           line-height: 42px; } }
 
 @media all {
-    .co-cta-wrapper .co-cta .co-cta-btn {
-      display: inline-block;
-      text-decoration: none;
-      font-size: 14px;
-      line-height: 40px;
-      font-weight: 700;
-      text-transform: uppercase;
-      height: 40px;
-      padding: 0 16px;
-      border-radius: 4px;
-      color: #fff; } }
-    @media all and (min-width: 768px) {
-      .co-cta-wrapper .co-cta .co-cta-btn {
-        line-height: 50px;
-        height: 50px;
-        padding: 0 32px; } }
+        .co-cta-wrapper .co-cta .co-cta-text p {
+          font-size: 20px;
+          line-height: 29px;
+          margin-bottom: 0; } }
+        @media all and (min-width: 768px) {
+          .co-cta-wrapper .co-cta .co-cta-text p {
+            font-size: 30px;
+            line-height: 42px; } }
 
 @media all {
-      .co-cta-wrapper .co-cta .co-cta-btn.co-cta-btn-first {
-        background-color: #DF1A22;
-        border-color: #DF1A22; }
-      .co-cta-wrapper .co-cta .co-cta-btn.co-cta-btn-second {
-        color: #343a40;
-        border-color: #343a40; }
-        .co-cta-wrapper .co-cta .co-cta-btn.co-cta-btn-second:hover {
-          color: #fff;
-          background-color: #343a40;
+      .co-cta-wrapper .co-cta .co-cta-text + .co-cta-buttons,
+      .co-cta-wrapper .co-cta .co-cta-subtext + .co-cta-buttons {
+        padding: 16px 0 0; } }
+      @media all and (min-width: 768px) {
+        .co-cta-wrapper .co-cta .co-cta-text + .co-cta-buttons,
+        .co-cta-wrapper .co-cta .co-cta-subtext + .co-cta-buttons {
+          padding: 32px 0 0; } }
+
+@media all {
+      .co-cta-wrapper .co-cta .co-cta-buttons .co-cta-btn {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        height: 40px;
+        padding: 0 16px;
+        border-radius: 4px;
+        color: #fff;
+        margin-bottom: 16px;
+        transition: all .2s ease; } }
+      @media all and (min-width: 768px) {
+        .co-cta-wrapper .co-cta .co-cta-buttons .co-cta-btn {
+          line-height: 50px;
+          height: 50px;
+          padding: 0 32px; } }
+
+@media all {
+        .co-cta-wrapper .co-cta .co-cta-buttons .co-cta-btn.co-cta-btn-first {
+          background-color: #DF1A22;
+          border-color: #DF1A22; }
+          .co-cta-wrapper .co-cta .co-cta-buttons .co-cta-btn.co-cta-btn-first:hover {
+            color: #DF1A22;
+            background-color: #fff;
+            border-color: #fff; }
+        .co-cta-wrapper .co-cta .co-cta-buttons .co-cta-btn.co-cta-btn-second {
+          color: #343a40;
           border-color: #343a40; }
-    .co-cta-wrapper .co-cta.co-cta-text-bright {
-      color: #fff; }
-      .co-cta-wrapper .co-cta.co-cta-text-bright .co-cta-btn-second {
-        border-color: #fff;
+          .co-cta-wrapper .co-cta .co-cta-buttons .co-cta-btn.co-cta-btn-second:hover {
+            color: #fff;
+            background-color: #343a40;
+            border-color: #343a40; }
+      .co-cta-wrapper .co-cta.co-cta-text-bright {
         color: #fff; }
-    .co-cta-wrapper .co-cta.co-cta-text-dark {
-      color: #000; }
-      .co-cta-wrapper .co-cta.co-cta-text-dark .co-cta-btn {
-        color: #000; }
-        .co-cta-wrapper .co-cta.co-cta-text-dark .co-cta-btn.co-cta-btn-first {
+        .co-cta-wrapper .co-cta.co-cta-text-bright .co-cta-buttons .co-cta-btn-second {
+          border-color: #fff;
           color: #fff; }
+      .co-cta-wrapper .co-cta.co-cta-text-dark {
+        color: #000; }
+        .co-cta-wrapper .co-cta.co-cta-text-dark .co-cta-buttons .co-cta-btn {
+          color: #000; }
+          .co-cta-wrapper .co-cta.co-cta-text-dark .co-cta-buttons .co-cta-btn.co-cta-btn-first {
+            color: #fff; }
+            .co-cta-wrapper .co-cta.co-cta-text-dark .co-cta-buttons .co-cta-btn.co-cta-btn-first:hover {
+              color: #DF1A22; }
     .co-cta-wrapper .co-cta-btn-first {
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22); }
-  .co-cta-fixed {
-    position: relative; }
-    .co-cta-fixed .cta-btn-fixed {
-      position: fixed;
-      top: 50%;
-      right: -19px;
-      padding: 0 16px;
-      height: 60px;
-      line-height: 50px;
-      transform: translateY(-50%) rotate(-90deg);
-      background-color: #fff;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 12px rgba(0, 0, 0, 0.22);
-      outline: none; } }
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22); } }
 
 
 /*# sourceMappingURL=style.min.css.map*/

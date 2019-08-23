@@ -4,16 +4,41 @@
 
 <div class="co-container-outer co-cta-wrapper sc-element @Presentation.Background"
   style='
-    @(Presentation.Background == "co-cta-backgroundimage" && !String.IsNullOrEmpty(Presentation.BackgroundImage) 
+    @((Presentation.Background == "co-cta-backgroundimage" || Presentation.Background == "co-cta-backgroundimage-overlay") && !String.IsNullOrEmpty(Presentation.BackgroundImage) 
       ? "background-image: url('" + Presentation.BackgroundImage + "?w=1920&amp;scale=both&amp;quality=70&amp;anchor=" + Presentation.CropAnchor + "')"
       : "")
   '>
   @Edit.Toolbar(Content)
   <div class="co-container-inner container-fluid">
-    <div class='row @(Presentation.TextAlignment == "text-center" ? "justify-content-center" : "")'>
-      <div class="col-12 col-lg-6">
+    @if(Presentation.Background == "co-cta-backgroundimage-overlay") {
+      <div class="backgroundimage-overlay"></div>
+    }
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
         <div class="co-cta @Presentation.TextColor @Presentation.TextAlignment">
-          @RenderPage("shared/_cta-content.cshtml")        
+          @if(Presentation.HeadingType != "hide") {
+            @Html.Raw("<" + Presentation.HeadingType + ">")
+              @Html.Raw(Content.Title.Replace("\n","<br>").Replace("<p>","").Replace("</p>",""))
+            @Html.Raw("</" + Presentation.HeadingType + ">")
+          }
+          @if(!String.IsNullOrEmpty(Content.Text)) {
+            <div class="co-cta-text">
+              @Html.Raw(Content.Text)
+            </div>
+          }
+          @if(!String.IsNullOrEmpty(Content.Subtext)) {
+            <div class="co-cta-subtext">
+              @Content.Subtext
+            </div>
+          }
+          <div class="co-cta-buttons">
+            @{ int i = 0; }
+            @foreach (var button in Content.Buttons)
+            {
+              <a href="@button.ButtonLink" class='btn co-cta-btn @(i == 0 ? "co-cta-btn-first" : "co-cta-btn-second")' target="@button.ButtonTarget">@button.ButtonText</a>
+              i++;
+            }
+          </div>
         </div>
       </div>
     </div>
