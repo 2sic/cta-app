@@ -101,6 +101,8 @@
             border-color: #343a40; }
       .co-cta-wrapper .co-cta.co-cta-text-bright {
         color: #fff; }
+        .co-cta-wrapper .co-cta.co-cta-text-bright h1, .co-cta-wrapper .co-cta.co-cta-text-bright h2, .co-cta-wrapper .co-cta.co-cta-text-bright h3, .co-cta-wrapper .co-cta.co-cta-text-bright h4, .co-cta-wrapper .co-cta.co-cta-text-bright h5, .co-cta-wrapper .co-cta.co-cta-text-bright h6 {
+          color: #fff; }
         .co-cta-wrapper .co-cta.co-cta-text-bright .co-cta-buttons .co-cta-btn-second {
           border-color: #fff;
           color: #fff; }
