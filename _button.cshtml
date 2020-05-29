@@ -23,7 +23,7 @@
             @{ int i = 0; }
             @foreach (var button in Content.Buttons)
             {
-              <a href="@button.ButtonLink" class='btn co-cta-btn @(i == 0 ? "co-cta-btn-first" : "co-cta-btn-second")' target="@button.ButtonTarget">@button.ButtonText</a>
+              <a href="@button.ButtonLink" class="btn co-cta-btn" target="@button.ButtonTarget">@button.ButtonText</a>
               i++;
             }
           </div>

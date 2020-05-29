@@ -99,8 +99,8 @@
             height: 50px;
             padding: 0 32px;
           }
-  
-          &.co-cta-btn-first {
+          
+          &:first-child {
             background-color: #DF1A22;
             border-color: #DF1A22;
 
@@ -110,8 +110,8 @@
               border-color: $white;
             }
           }
-          
-          &.co-cta-btn-second {
+
+          &:not(:first-child) {
             color: #343a40;
             border-color: #343a40;
   
@@ -132,9 +132,15 @@
         }
 
         .co-cta-buttons {
-          .co-cta-btn-second {
-            border-color: $white;
-            color: $white;
+          .co-cta-btn {
+            &:not(:first-child) {
+              border-color: $white;
+              color: $white;
+
+              &:hover {
+                border-color: #343a40;
+              }
+            }
           }
         }
       }
@@ -144,7 +150,7 @@
         
         .co-cta-buttons {
           .co-cta-btn {
-            &.co-cta-btn-first {
+            &:first-child {
               color: $white;
 
               &:hover {
