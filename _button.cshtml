@@ -1,34 +1,22 @@
+@inherits ToSic.Sxc.Dnn.RazorComponent
+@using ToSic.Razor.Blade;
 @{
-  string Edition = PageData["Edition"];
+    var helpers = CreateInstance("_helpers.cshtml");
 }
-
-<div class="co-container-outer co-cta-wrapper sc-element @Presentation.Background"
-  style='
-    @((Presentation.Background == "co-cta-backgroundimage" || Presentation.Background == "co-cta-backgroundimage-overlay") && !String.IsNullOrEmpty(Presentation.BackgroundImage) 
-      ? "background-image: url('" + Presentation.BackgroundImage + "?w=1920&amp;scale=both&amp;quality=70&amp;anchor=" + Presentation.CropAnchor + "')"
-      : "")
-  '>
-  @Edit.Toolbar(Content)
-  <div class="co-container-inner container-fluid">
-    @if(Presentation.Background == "co-cta-backgroundimage-overlay") {
+<div class="co-cta-wrapper @Content.Presentation.Background" @helpers.WrapperStyle(Content.Presentation)>
+  <div class="container-fluid" @Edit.TagToolbar(Content, toolbar: new [] { "settings&hover=left&autoAddMore=start" })>
+    @if(Content.Presentation.Background == "co-cta-backgroundimage-overlay") {
       <div class="backgroundimage-overlay"></div>
     }
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
-        <div class="co-cta @Presentation.TextColor @Presentation.TextAlignment">
-          @if(Presentation.HeadingType != "hide") {
-            @Html.Raw("<" + Presentation.HeadingType + ">")
-              @Html.Raw(Content.Title.Replace("\n","<br>").Replace("<p>","").Replace("</p>",""))
-            @Html.Raw("</" + Presentation.HeadingType + ">")
+        <div class="co-cta @Content.Presentation.TextColor @Content.Presentation.TextAlignment">
+          @if(Content.Presentation.HeadingType != "hide") {
+            @Tag.Custom(Content.Presentation.HeadingType, Content.Title)
           }
-          @if(!String.IsNullOrEmpty(Content.Text)) {
+          @if(Text.Has(Content.Text)) {
             <div class="co-cta-text">
               @Html.Raw(Content.Text)
-            </div>
-          }
-          @if(!String.IsNullOrEmpty(Content.Subtext)) {
-            <div class="co-cta-subtext">
-              @Content.Subtext
             </div>
           }
           <div class="co-cta-buttons">
@@ -45,4 +33,4 @@
   </div>
 </div>
 
-<link rel="stylesheet" type="text/css" href="@App.Path/@Edition/dist/styles.min.css" data-enableoptimizations="true">
+<link rel="stylesheet" type="text/css" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
