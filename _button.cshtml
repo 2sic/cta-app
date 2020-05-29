@@ -3,7 +3,7 @@
 @{
     var helpers = CreateInstance("_helpers.cshtml");
 }
-<div class="co-cta-wrapper @Content.Presentation.Background" @helpers.WrapperStyle(Content.Presentation)>
+<div class="co-cta-wrapper mb-4 @Content.Presentation.Background" @helpers.WrapperStyle(Content.Presentation)>
   <div class="container-fluid" @Edit.TagToolbar(Content, toolbar: new [] { "settings&hover=left&autoAddMore=start" })>
     @if(Content.Presentation.Background == "co-cta-backgroundimage-overlay") {
       <div class="backgroundimage-overlay"></div>
