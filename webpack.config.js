@@ -9,7 +9,6 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 module.exports = {
   entry: {
     style: './src/scss/styles.scss',
-    scripts: './src/ts/scripts.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
