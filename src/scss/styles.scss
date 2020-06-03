@@ -5,6 +5,7 @@
   .co-cta-wrapper {
     $primaryBtnColor: #DF1A22;
     $secondaryBtnColor: #343a40;
+    position: relative;
 
     &.co-cta-background-primary {
       background: rgba(#000, 1.0) url(../../images/bg-hexagon-darkblue.png) center center repeat fixed;
