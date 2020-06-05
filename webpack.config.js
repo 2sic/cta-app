@@ -8,7 +8,7 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 module.exports = {
   entry: {
-    style: './src/scss/styles.scss',
+    style: './src/styles/styles.scss',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
