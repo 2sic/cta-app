@@ -1,8 +1,8 @@
 @inherits ToSic.Sxc.Dnn.RazorComponent
 @using ToSic.Razor.Blade;
 
-@helper WrapperStyle(dynamic data) {
-<text>style='@((data.Background == "co-cta-backgroundimage" || data.Background == "co-cta-backgroundimage-overlay") && Text.Has(data.BackgroundImage) 
+@helper WrapperStyleAttribute(dynamic data) {
+<text>style='@(Text.Has(data.BackgroundImage) 
       ? "background-image: url('" + data.BackgroundImage + "?w=1920&amp;scale=both&amp;quality=70&amp;anchor=" + data.CropAnchor + "')"
       : "")'</text>
 }
