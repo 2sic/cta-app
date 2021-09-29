@@ -1,0 +1,31 @@
+@inherits Custom.Hybrid.Razor12
+@using ToSic.Razor.Blade;
+@{
+    var helpers = CreateInstance("Helpers.cs");
+    var presentation = Content.Presentation;
+}
+<div class='container-fluid app-cta3-wrapper mb-4 @(Text.Has(presentation.BackgroundImage) ? "" : presentation.Background)'
+  style='@helpers.WrapperStyleAttribute(presentation)'
+  @Edit.TagToolbar(Content, toolbar: new [] { "settings&hover=left&autoAddMore=start" })
+  >
+  <div class="backgroundimage-overlay" style='@(presentation.ShowImageOverlay ? "display: block" : "display: none")'></div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2 app-cta3 @presentation.TextColor @presentation.TextAlignment">
+      @if(presentation.HeadingType != "hide") {
+        @Tag.Custom(presentation.HeadingType, Content.Title)
+      }
+      @if(Text.Has(Content.Text)) {
+        <div class="app-cta3-text">
+          @Html.Raw(Content.Text)
+        </div>
+      }
+      <div class="app-cta3-buttons">
+        @foreach (var btn in Content.Buttons) {
+          <a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget">@btn.ButtonText</a>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+@Html.Partial("./_CTA.PartAssets.cshtml")
