@@ -3,9 +3,9 @@ using ToSic.Razor.Blade;
 public class Helpers: Custom.Hybrid.Code12
 {
       public dynamic WrapperStyleAttribute(dynamic data) {
-            return (Text.Has(data.BackgroundImage) 
-                  ? "background-image: url('" + Link.Image(url: data.BackgroundImage, width: 1920, quality: 70) + "')"
-                  : "");
+            return Text.Has(data.BackgroundImage) 
+                  ? "background-image: url('" + Link.Image(url: data.BackgroundImage, width: 1920, quality: 70) + "')" 
+                  : "";
       }
 }
 

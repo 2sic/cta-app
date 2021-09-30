@@ -10,11 +10,9 @@ module.exports = (env) => {
   return {
     entry: {
       styles: `./${env.style}/styles/${env.style}.scss`,      
-      scripts: './src/ts/index.ts',
     },
     output: {
       path: path.resolve(__dirname, `${env.style}/dist`),
-      filename: '[name].min.js',
     },
     mode: 'production',
     devtool: 'source-map',

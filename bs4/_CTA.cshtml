@@ -1,8 +1,9 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
 @{
-    var helpers = CreateInstance("Helpers.cs");
-    var presentation = Content.Presentation;
+  // Get some helper commands for later on
+  var helpers = CreateInstance("Helpers.cs");
+  var presentation = Content.Presentation;
 }
 <div class='container-fluid app-cta3-wrapper mb-4 @(Text.Has(presentation.BackgroundImage) ? "" : presentation.Background)'
   style='@helpers.WrapperStyleAttribute(presentation)'
