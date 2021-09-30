@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.02.01" ExportDate="2020-06-10T16:11:05.0952113+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-30T08:30:27.3709116+02:00">
   <Header>
-    <App Guid="efbee2e0-6e61-42ed-aef7-94375b03fbb8" />
-    <Language Default="en-US" />
+    <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
+    <Language Default="en-us" />
     <Dimensions>
       <Dimension DimensionID="143" Name="English (United States)" SystemKey="" ExternalKey="en-US" Active="true" />
       <Dimension DimensionID="144" Name="Deutsch (Deutschland)" SystemKey="" ExternalKey="de-DE" Active="true" />
@@ -28,13 +28,22 @@
             <Value Key="Disabled" Value="False" Type="Boolean">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="143" ReadOnly="false" />
+            </Value>
             <Value Key="InputType" Value="string-default" Type="String">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
             <Value Key="Name" Value="Title" Type="String">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
+            <Value Key="Name" Value="Titel" Type="String">
+              <Dimension DimensionID="144" ReadOnly="false" />
+            </Value>
             <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="143" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
             <Value Key="Required" Value="True" Type="Boolean">
@@ -55,7 +64,11 @@
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
           </Entity>
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-default" AttributeSetName="@string-default" EntityGUID="e7577704-edf6-49da-a693-bf2d5573571f" Json="True" KeyNumber="3103" />
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-default" AttributeSetName="@string-default" EntityGUID="e7577704-edf6-49da-a693-bf2d5573571f" Json="True" KeyNumber="3103">
+            <Value Key="InputFontFamily" Value="" Type="String">
+              <Dimension DimensionID="143" ReadOnly="false" />
+            </Value>
+          </Entity>
         </Attribute>
         <Attribute StaticName="ButtonText" Type="String" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="0c44a5ca-b9d1-4f9c-a648-5b91446375d0" Json="True" KeyNumber="3090">
@@ -642,11 +655,14 @@
             </Value>
           </Entity>
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-dropdown" AttributeSetName="@string-dropdown" EntityGUID="b07b4b97-7ae6-4301-bc64-522874bd5b6a" Json="True" KeyNumber="3096">
-            <Value Key="DropdownValues" Value="none:&#xA;Blau mit Hexagon-Pattern:app-cta-background-primary&#xA;Grau mit Hexagon-Pattern:app-cta-background-lightgrey" Type="String">
+            <Value Key="DropdownValues" Value="none:&#xA;Blau mit Hexagon-Pattern:app-cta3-background-primary&#xA;Grau mit Hexagon-Pattern:app-cta3-background-lightgrey" Type="String">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
             <Value Key="DropdownValues" Value="ohne:&#xA;Blau mit Hexagon-Pattern:app-cta-background-primary&#xA;Grau mit Hexagon-Pattern:app-cta-background-lightgrey&#xA;Hintergrundbild:app-cta-backgroundimage&#xA;Hintergrundbild mit Überlagerung:app-cta-backgroundimage-overlay" Type="String">
               <Dimension DimensionID="144" ReadOnly="false" />
+            </Value>
+            <Value Key="DropdownValuesFormat" Value="" Type="String">
+              <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
             <Value Key="EnableTextEntry" Value="False" Type="Boolean">
               <Dimension DimensionID="144" ReadOnly="false" />
@@ -870,11 +886,11 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="DisplayName" Value="CTA-App" Type="String">
+      <Value Key="DisplayName" Value="Call To Action" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Folder" Value="CTA" Type="String">
+      <Value Key="Folder" Value="CTA3" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -890,7 +906,10 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="08.03.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="02.02.00" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredVersion" Value="12.05.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -898,7 +917,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="02.00.00" Type="String">
+      <Value Key="Version" Value="03.00.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -942,6 +961,12 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
+      <Value Key="Icon" Value="[App:Path]/Icons/_CTA.png" Type="Hyperlink">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Identifier" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
       <Value Key="IsHidden" Value="False" Type="Boolean">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
@@ -954,7 +979,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Location" Value="Portal File System" Type="String">
+      <Value Key="Location" Value="Site" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -962,7 +987,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="_CTA with Text.cshtml" Type="String">
+      <Value Key="Path" Value="bs4/_CTA.cshtml" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -975,6 +1000,12 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
+      <Value Key="SearchIndexingDisabled" Value="False" Type="Boolean">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="SearchIndexingStreams" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
       <Value Key="StreamsToPublish" Value="" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
@@ -985,6 +1016,9 @@
       </Value>
       <Value Key="UseForList" Value="False" Type="Boolean">
         <Dimension DimensionID="144" ReadOnly="false" />
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="ViewController" Value="" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="ViewNameInUrl" Value="" Type="String">
@@ -1009,6 +1043,16 @@
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="3fa4a025-7b45-4765-98c6-7599b9b6aa53" Json="True">
+      <Value Key="Content" Value="null" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="98a389fd-865a-4771-ac5a-c79f40760677" Type="Entity" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="1183ac81-1eee-4408-922a-454af8cb6eeb" Json="True">
+      <Value Key="Content" Value="cbaebc5e-8948-491e-bfd4-2badbbe642ac" Type="Entity" />
+      <Value Key="Presentation" Value="c17d11c7-7c41-43d7-82c8-749537a89e68" Type="Entity" />
+      <Value Key="Template" Value="98a389fd-865a-4771-ac5a-c79f40760677" Type="Entity" />
+    </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" AttributeSetName="CTA Content" EntityGUID="cbaebc5e-8948-491e-bfd4-2badbbe642ac">
       <Value Key="Buttons" Value="931dae44-c997-4367-84d3-9edbc08e1b7c,793a65e2-c199-4519-aee8-d686cf916bad" Type="Entity" />
       <Value Key="Text" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;" Type="String">
@@ -1017,6 +1061,9 @@
       <Value Key="Title" Value="Test" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="69e586af-db96-49a9-b6a2-890ce689fde2" Json="True">
+      <Value Key="Template" Value="98a389fd-865a-4771-ac5a-c79f40760677" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="761f827e-7e0a-430b-8398-6a32a3286430" AttributeSetName="PresentationSettings" EntityGUID="6c524810-bf70-4bd1-9bee-0bc75df616e1">
       <Value Key="Background" Value="" Type="String">
@@ -1042,7 +1089,7 @@
       </Value>
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="761f827e-7e0a-430b-8398-6a32a3286430" AttributeSetName="PresentationSettings" EntityGUID="c17d11c7-7c41-43d7-82c8-749537a89e68">
-      <Value Key="Background" Value="app-cta-background-lightgrey" Type="String">
+      <Value Key="Background" Value="app-cta3-background-lightgrey" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="BackgroundImage" Value="" Type="Hyperlink">
@@ -1064,12 +1111,15 @@
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="ce0f92c9-2526-4d2b-bb08-8d0eb2ad6bb4" Json="True">
+      <Value Key="Template" Value="98a389fd-865a-4771-ac5a-c79f40760677" Type="Entity" />
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="4159" RelativePath="adam\CTA-App\uKMvgQ8Z-06-cLYmAW6LrA\BackgroundImage\PROFFIX-Erfolgsstory-Petfriends.jpg" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="6963" RelativePath="adam/CTA-App/uKMvgQ8Z-06-cLYmAW6LrA/BackgroundImage/" />
-    <Folder Id="9972" RelativePath="adam/CTA/" />
+    <Folder Id="13439" RelativePath="adam/CTA3/" />
   </PortalFolders>
 </SexyContent>
