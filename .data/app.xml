@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-30T08:30:27.3709116+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-10-02T08:29:05.4864612+02:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -420,6 +420,9 @@
             <Value Key="Notes" Value="&lt;p&gt;W&amp;auml;hle die &amp;Uuml;berschriftgr&amp;ouml;sse aus.&lt;/p&gt;" Type="String">
               <Dimension DimensionID="144" ReadOnly="false" />
             </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="143" ReadOnly="false" />
+            </Value>
             <Value Key="Required" Value="False" Type="Boolean">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
@@ -439,7 +442,13 @@
             </Value>
           </Entity>
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-dropdown" AttributeSetName="@string-dropdown" EntityGUID="e21d19cd-a022-413c-9e05-df5502bb5900" Json="True" KeyNumber="3104">
-            <Value Key="DropdownValues" Value="Überschrift Ebene 1:h1&#xA;Überschrift Ebene 2:h2&#xA;Überschrift Ebene 3:h3&#xA;Überschrift Ebene 4:h4&#xA;Überschrift Ebene 5:h5&#xA;Überschrift Ebene 6:h6&#xA;Ausblenden:hide" Type="String">
+            <Value Key="DropdownValues" Value="h1:Heading 1 (not recommended!)&#xA;h2:Heading 2&#xA;h3:Heading 3&#xA;h4:Heading 4&#xA;h5:Heading 5&#xA;h6:Heading 6&#xA;hide:Ausblenden" Type="String">
+              <Dimension DimensionID="143" ReadOnly="false" />
+            </Value>
+            <Value Key="DropdownValues" Value="h1:Überschrift 1 (nicht empfohlen)&#xA;h2:Überschrift 2&#xA;h3:Überschrift 3&#xA;h4:Überschrift 4&#xA;h5:Überschrift 5&#xA;h6:Überschrift 6&#xA;hide:Ausblenden" Type="String">
+              <Dimension DimensionID="144" ReadOnly="false" />
+            </Value>
+            <Value Key="DropdownValuesFormat" Value="value-label" Type="String">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
             <Value Key="EnableTextEntry" Value="False" Type="Boolean">

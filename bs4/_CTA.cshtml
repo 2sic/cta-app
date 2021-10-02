@@ -3,17 +3,20 @@
 @{
   // Get some helper commands for later on
   var helpers = CreateInstance("Helpers.cs");
-  var presentation = Content.Presentation;
+  var pres = Content.Presentation;
+  var btnToolbar = new [] { "toolbar=empty", "+edit" };
+
+  // only show the pattern if no image is given
+  var bgPatternStyle = Text.Has(pres.BackgroundImage) ? "" : pres.Background;
+
+  // TODO:  die 3 zeilen aus dem helper hier hinsetzen
 }
-<div class='container-fluid app-cta3-wrapper mb-4 @(Text.Has(presentation.BackgroundImage) ? "" : presentation.Background)'
-  style='@helpers.WrapperStyleAttribute(presentation)'
-  @Edit.TagToolbar(Content, toolbar: new [] { "settings&hover=left&autoAddMore=start" })
-  >
-  <div class="backgroundimage-overlay" style='@(presentation.ShowImageOverlay ? "display: block" : "display: none")'></div>
+<div class='container-fluid app-cta3-wrapper mb-4 @bgPatternStyle' style='@helpers.WrapperStyleAttribute(pres)' @Edit.TagToolbar(Content)>
+  <div class="backgroundimage-overlay" style='display: @(pres.ShowImageOverlay ? "block" : "none")'></div>
   <div class="row">
-    <div class="col-lg-8 offset-lg-2 app-cta3 @presentation.TextColor @presentation.TextAlignment">
-      @if(presentation.HeadingType != "hide") {
-        @Tag.Custom(presentation.HeadingType, Content.Title)
+    <div class="col-lg-8 offset-lg-2 app-cta3 @pres.TextColor @pres.TextAlignment">
+      @if(pres.HeadingType != "hide") {
+        @Tag.Custom(pres.HeadingType, Content.Title)
       }
       @if(Text.Has(Content.Text)) {
         <div class="app-cta3-text">
@@ -22,7 +25,9 @@
       }
       <div class="app-cta3-buttons">
         @foreach (var btn in Content.Buttons) {
-          <a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget">@btn.ButtonText</a>
+          <a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget" @Edit.TagToolbar(btn, toolbar: btnToolbar, condition: !Content.IsDemoItem)>
+            @btn.ButtonText
+          </a>
         }
       </div>
     </div>
@@ -30,3 +35,4 @@
 </div>
 
 @Html.Partial("./_CTA.PartAssets.cshtml")
+
