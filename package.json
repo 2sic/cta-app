@@ -1,7 +1,5 @@
 {
   "name": "app-cta",
-  "version": "03.00.00",
-  "description": "The standard template to build sexy apps.",
   "main": "",
   "scripts": {
     "build-bs4": "webpack --env style=bs4"
