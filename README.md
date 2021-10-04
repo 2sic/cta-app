@@ -24,7 +24,7 @@ A Call-To-Action App to motivate customer interaction
 | Bootstrap 5         | ✔️    | Works well, but not optimized
 
 
-## Customize the app
+## Customize the App
 
 The Counter App doesn't use any app settings or app resources.
 
