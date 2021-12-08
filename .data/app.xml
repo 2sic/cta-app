@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-10-08T17:42:37.3160302+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.00" ExportDate="2021-12-08T09:52:19.1032367+01:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -999,7 +999,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.00.00" Type="String">
+      <Value Key="Version" Value="03.00.01" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1250,6 +1250,11 @@
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Setting Visible" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="3937fa17-ef2d-40a7-b089-64164eb10bab" AttributeSetName="2sxcPolymorphismConfiguration" EntityGUID="8db9bc7c-5ec1-4a49-8828-5f423a9dcecc" Json="True">
+      <Value Key="Mode" Value="Koi?cssFramework" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
     </Entity>
