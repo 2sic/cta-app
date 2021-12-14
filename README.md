@@ -20,7 +20,7 @@ A Call-To-Action App to motivate customer interaction
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✔️    | 
 | Bootstrap 4         | ✅    |
-| Bootstrap 5         | ✔️    | Works well, but not optimized
+| Bootstrap 5         | ✅    |
 
 
 ## Customize the App

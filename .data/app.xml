@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.00" ExportDate="2021-12-08T09:52:19.1032367+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.00" ExportDate="2021-12-14T16:50:55.9644949+01:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -9,13 +9,13 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes />
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes />
     </AttributeSet>
-    <AttributeSet StaticName="d6fcb920-d092-4b4d-8eea-7e23361de827" Name="Button" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d6fcb920-d092-4b4d-8eea-7e23361de827" Name="Button" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a93bbcef-92e2-4700-8629-00dc6d062e05" Json="True" KeyNumber="3103">
@@ -257,7 +257,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" Name="CTA Content" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" Name="CTA Content" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9de909ef-5815-485c-9baf-f658f6040808" Json="True" KeyNumber="3093">
@@ -395,7 +395,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="761f827e-7e0a-430b-8398-6a32a3286430" Name="PresentationSettings" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="761f827e-7e0a-430b-8398-6a32a3286430" Name="PresentationSettings" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="HeadingType" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="64d7f4b8-d3df-4a0c-96f4-00732ca8cbf9" Json="True" KeyNumber="3104">
@@ -999,7 +999,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.00.01" Type="String">
+      <Value Key="Version" Value="03.01.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
