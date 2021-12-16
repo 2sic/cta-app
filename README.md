@@ -15,8 +15,8 @@ A Call-To-Action App to motivate customer interaction
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/wwLfP_ve) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
-| App Catalog         | ➖    | Not yet listed
-| Screenshots         | ➖    | Not yet listed
+| App Catalog         | ➖    | See [app catalog](https://2sxc.org/en/apps/app/cta-v3-for-dnn-and-oqtane)
+| Screenshots         | ➖    | See [app catalog](https://2sxc.org/en/apps/app/cta-v3-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✔️    | 
 | Bootstrap 4         | ✅    |
