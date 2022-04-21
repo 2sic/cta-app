@@ -1,0 +1,41 @@
+@inherits Custom.Hybrid.Razor12
+@using ToSic.Sxc.Services; @* Make it easier to use https://r.2sxc.org/services *@
+@using ToSic.Razor.Blade;
+@{
+  var isTextFirst = Settings.TextFirst;
+	var colsText = isTextFirst ? Settings.ColsElement : 12 - Settings.ColsElement;
+  var colsImg = 12 - colsText;
+  
+	var pres = Content.Presentation;
+  var btnToolbar = new [] { "toolbar=empty", "+edit" };
+}
+
+<div class='app-cta3-wrapper mb-4' @Edit.TagToolbar(Content)> 
+	<div class="row">
+		<div class='col-md-@colsText order-md-@(isTextFirst ? "first" : "last") app-cta3 app-cta3-text-image text-dark @pres.TextAlignment @pres.TextVAlignment'>
+			@if(pres.HeadingType != "hide") {
+				@Tag.Custom(pres.HeadingType, Content.Title)
+			}
+			@if(Text.Has(Content.Text)) {
+				<div class="app-cta3-text">
+					@Html.Raw(Content.Text)
+				</div>
+			}
+
+			<div class="app-cta3-buttons">
+				@foreach (var btn in Content.Buttons) {
+					<a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget" @Edit.TagToolbar(btn, toolbar: btnToolbar, condition: !Content.IsDemoItem)>
+						@btn.ButtonText
+					</a>
+				}
+			</div>
+		</div>
+		@* If the image has it's own column, it's here *@
+		@if (colsImg != 0) {
+			<div class='col-md-@colsImg order-md-@(!isTextFirst ? "first" : "last")'>
+				@* call sub-template to show the image with all possible options *@
+        @Html.Partial("_Text and Image.Part-Image.cshtml", new { Item = pres, Columns = colsImg})
+			</div>
+		}
+	</div>
+</div>

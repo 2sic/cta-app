@@ -11,7 +11,7 @@
   var bgImageStyle = Text.Has(pres.BackgroundImage) ? "background-image: url('" + Link.Image(pres.BackgroundImage, Settings.Images.Section, height: 0) + "')" : "";
 }
 
-<div class='container-fluid app-cta3-wrapper mb-4 @bgPatternStyle' style='@bgImageStyle' @Edit.TagToolbar(Content)>
+<div class='app-cta3-wrapper mb-4 @bgPatternStyle' style='@bgImageStyle' @Edit.TagToolbar(Content)>
   <div class="backgroundimage-overlay" style='display: @(pres.ShowImageOverlay ? "block" : "none")'></div>
   <div class="row">
     <div class="col-lg-8 offset-lg-2 app-cta3 @pres.TextColor @pres.TextAlignment">
