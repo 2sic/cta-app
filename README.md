@@ -38,3 +38,4 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
     * Tested to look ok on Bootstrap5
 * 2022-04 v03.01.00
     * Changed Services to ToSic.Sxc.Services
+    * Activated image configuration
