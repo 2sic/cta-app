@@ -1,6 +1,8 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
+@using ToSic.Sxc.Services;
 @{
+  var imgSvc = GetService<IImageService>();
   /* This is a partial template which is re-used in the Content-Templates */
 
   // Parameter passed in from the calling page - if we don't have an image, exit
@@ -12,5 +14,5 @@
   var resizeFactor = (DynamicModel.Columns ?? 12) + "/12";
 }
   <figure>
-    <img loading="lazy" class="img-fluid" src='@Link.Image(imgItem.BackgroundImage, Settings.Images.Content, factor: resizeFactor)' alt="@Text.First(imgItem.ImageCaption, imgItem.Title)" />
+    @imgSvc.Picture(imgItem.BackgroundImage, imgClass:"img-fluid", settings: Settings.Images.Content, factor: resizeFactor, imgAlt:Text.First(imgItem.ImageCaption, imgItem.Title))
   </figure>
