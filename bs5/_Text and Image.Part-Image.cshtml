@@ -14,10 +14,8 @@
 
   // Image Service used to generate optimal images
   var imgSvc = GetService<IImageService>();
-
-  var altText = Text.First(imgItem.Field("BackgroundImage").Metadata.Description, imgItem.Title);
 }
 
 <figure>
-  @imgSvc.Picture(imgItem.Field("BackgroundImage"), settings: "Content", factor: resizeFactor, imgAlt: altText)
+  @imgSvc.Picture(imgItem.Field("BackgroundImage"), settings: "Content", factor: resizeFactor)
 </figure>
