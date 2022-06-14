@@ -10,7 +10,7 @@ A Call-To-Action App to motivate customer interaction
 | ------------------- | :----: | ------------------- |
 | 2sxc                | ✅    | requires 2sxc v13.10
 | Dnn                 | ✅    | For v7, v8 and v9
-| Oqtane 2            | ✅    | Requires v3.02+
+| Oqtane 2            | ✅    | Requires v3.01+
 | No jQuery           | ✅    | 
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/wwLfP_ve) on [azing.org](https://azing.org/2sxc)
