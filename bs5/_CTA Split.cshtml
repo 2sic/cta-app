@@ -1,5 +1,4 @@
-@inherits Custom.Hybrid.Razor12
-@using ToSic.Sxc.Services; @* Make it easier to use https://r.2sxc.org/services *@
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
 @{
   var isTextFirst = Settings.TextFirst;
@@ -7,10 +6,11 @@
   var colsImg = 12 - colsText;
   
 	var pres = Content.Presentation;
-  var btnToolbar = new [] { "toolbar=empty", "+edit" };
+	
+	var btnToolbar = Kit.Toolbar.Empty().Edit().Condition(!Content.IsDemoItem);
 }
 
-<div class='app-cta3-wrapper mb-4' @Edit.TagToolbar(Content)> 
+<div class='app-cta3-wrapper mb-4' @Kit.Toolbar.Default(Content)> 
 	<div class="row">
 		<div class='col-md-@colsText order-md-@(isTextFirst ? "first" : "last") app-cta3 app-cta3-text-image text-dark @pres.TextAlignment @pres.TextVAlignment'>
 			@if(pres.HeadingType != "hide") {
@@ -24,7 +24,7 @@
 
 			<div class="app-cta3-buttons">
 				@foreach (var btn in Content.Buttons) {
-					<a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget" @Edit.TagToolbar(btn, toolbar: btnToolbar, condition: !Content.IsDemoItem)>
+					<a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget" @btnToolbar.For(btn)>
 						@btn.ButtonText
 					</a>
 				}

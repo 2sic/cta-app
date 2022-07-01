@@ -1,6 +1,5 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@using ToSic.Sxc.Services;
 @{
   /* This is a partial template which is re-used in the Content-Templates */
 
@@ -11,11 +10,8 @@
   // Figure out width of the image based on max-width of a content-image and 12 Bootstrap Columns
   // The resulting value will be something like "12/12" or "4/12" which is used by the Link.Image(...)
   var resizeFactor = (DynamicModel.Columns ?? 12) + "/12";
-
-  // Image Service used to generate optimal images
-  var imgSvc = GetService<IImageService>();
 }
 
 <figure>
-  @imgSvc.Picture(imgItem.Field("BackgroundImage"), settings: "Content", factor: resizeFactor)
+  @Kit.Image.Picture(imgItem.Field("BackgroundImage"), settings: "Content", factor: resizeFactor)
 </figure>
