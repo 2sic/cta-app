@@ -5,6 +5,7 @@
 
   // Parameter passed in from the calling page - if we don't have an image, exit
   var imgItem = DynamicModel.Item;  // The content-item with the image
+  var contentItem = DynamicModel.Content;
   if (!Text.Has(imgItem.BackgroundImage)) { return; }
 
   // Figure out width of the image based on max-width of a content-image and 12 Bootstrap Columns
@@ -13,5 +14,5 @@
 }
 
 <figure>
-  @Kit.Image.Picture(imgItem.Field("BackgroundImage"), settings: "Content", factor: resizeFactor)
+  @Kit.Image.Picture(imgItem.Field("BackgroundImage"), settings: "Content", factor: resizeFactor, imgAlt: contentItem.Title)
 </figure>
