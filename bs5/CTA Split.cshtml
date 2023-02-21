@@ -1,12 +1,12 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
 @{
-  var isTextFirst = Settings.TextFirst;
+  	var isTextFirst = Settings.TextFirst;
 	var colsText = isTextFirst ? Settings.ColsElement : 12 - Settings.ColsElement;
-  var colsImg = 12 - colsText;
+  	var colsImg = 12 - colsText;
   
 	var pres = Content.Presentation;
-	
+  	// Toolbar for the Button, when is not de a Demo Item you can Edit 
 	var btnToolbar = Kit.Toolbar.Empty().Edit().Condition(!Content.IsDemoItem);
 }
 

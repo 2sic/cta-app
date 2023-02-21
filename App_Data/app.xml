@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="14.09.00" ExportDate="2022-09-21T08:40:08.8902851+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="15.03.00" ExportDate="2023-02-21T08:48:21.0497437+01:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -9,13 +9,13 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes />
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes />
     </AttributeSet>
-    <AttributeSet StaticName="d6fcb920-d092-4b4d-8eea-7e23361de827" Name="Button" Description="" Scope="Default" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d6fcb920-d092-4b4d-8eea-7e23361de827" Name="Button" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a93bbcef-92e2-4700-8629-00dc6d062e05" Json="True" KeyNumber="3103">
@@ -257,7 +257,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" Name="CTA Content" Description="" Scope="Default" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" Name="CTA Content" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9de909ef-5815-485c-9baf-f658f6040808" Json="True" KeyNumber="3093">
@@ -395,7 +395,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="761f827e-7e0a-430b-8398-6a32a3286430" Name="PresentationSettings" Description="" Scope="Default" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="761f827e-7e0a-430b-8398-6a32a3286430" Name="PresentationSettings" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="HeadingType" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="64d7f4b8-d3df-4a0c-96f4-00732ca8cbf9" Json="True" KeyNumber="3104">
@@ -940,7 +940,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="0ef6007e-7877-4845-baf3-5d4d4f4aa971" Name="TextImageViewSettings" Description="" Scope="System.Configuration" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="0ef6007e-7877-4845-baf3-5d4d4f4aa971" Name="TextImageViewSettings" Scope="System.Configuration" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b9d6b03e-f246-4f06-8c37-9dac075f81d9" Json="True" KeyNumber="5197">
@@ -1034,7 +1034,7 @@
             </Value>
           </Entity>
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Number" AttributeSetName="@Number" EntityGUID="26d3bd1a-08fb-42b5-9375-d4391c97e079" Json="True" KeyNumber="5199">
-            <Value Key="Decimals" Value="0" Type="Number">
+            <Value Key="Decimals" Value="0.0" Type="Number">
               <Dimension DimensionID="143" ReadOnly="false" />
             </Value>
           </Entity>
@@ -1079,7 +1079,7 @@
       <Value Key="RequiredOqtaneVersion" Value="3.1" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="14.09.00" Type="String">
+      <Value Key="RequiredVersion" Value="15.03.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1087,7 +1087,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.03.01" Type="String">
+      <Value Key="Version" Value="03.04.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1157,7 +1157,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs4/_CTA.cshtml" Type="String">
+      <Value Key="Path" Value="bs5/CTA.cshtml" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1344,7 +1344,7 @@
       <Value Key="Name" Value="CTA Image Text" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs5/_CTA Split.cshtml" Type="String">
+      <Value Key="Path" Value="bs5/CTA Split.cshtml" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="PresentationDemoEntity" Value="6c524810-bf70-4bd1-9bee-0bc75df616e1" Type="Entity" />
@@ -1451,7 +1451,7 @@
       <Value Key="Name" Value="CTA Text Image" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Path" Value="bs5/_CTA Split.cshtml" Type="String">
+      <Value Key="Path" Value="bs5/CTA Split.cshtml" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="PresentationDemoEntity" Value="6c524810-bf70-4bd1-9bee-0bc75df616e1" Type="Entity" />
@@ -1529,7 +1529,7 @@
       <Value Key="Advanced" Value="" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="ByUrlParameters" Value="False" Type="Boolean">
+      <Value Key="ByUrlParameters" Value="True" Type="Boolean">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="Duration" Value="14400" Type="Number">
