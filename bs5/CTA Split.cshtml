@@ -34,7 +34,7 @@
 		@if (colsImg != 0) {
 			<div class='col-md-@colsImg order-md-@(!isTextFirst ? "first" : "last")'>
 				@* call sub-template to show the image with all possible options *@
-        @Html.Partial("_Text and Image.Part-Image.cshtml", new { Content = Content, Item = pres, Columns = colsImg})
+        		@Html.Partial("Text and Image.Part-Image.cshtml", new { Content = Content, Item = pres, Columns = colsImg})
 			</div>
 		}
 	</div>
