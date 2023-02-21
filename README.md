@@ -32,18 +32,22 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 ## History
 
-* 2021-10 v03.00.00
+* v03.00.00 2021-10
     * Updated to best-practices of 2sxc 12.05
     * Hybrid, so it works with Oqtane
     * Tested to look ok on Bootstrap5
-* 2022-01 v03.01.00
+* v03.01.00 2022-01 
     * Enabled ajax-reload
     * Set default view
     * Updated License
-* 2022-04 v03.02.00
+* v03.02.00 2022-04 
     * Changed Services to ToSic.Sxc.Services
     * Activated image configuration
-* 2022-06 v03.03.00 
+* v03.03.00 2022-06 
     * Replaced all base classes with their 2sxc 14 equivalent
     * Removed all GetService<> and used the new ServiceKit14
     * Changed all toolbars to use the new IToolbarService
+* v.03.04.00 2023-02
+    * Replaced Tag.Custom with `Kit.HtmlTags`
+    * Enhanced Kit.Image with `imgAltFallback`
+    * Removed _ from Filenames

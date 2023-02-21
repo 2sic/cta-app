@@ -14,7 +14,7 @@
 	<div class="row">
 		<div class='col-md-@colsText order-md-@(isTextFirst ? "first" : "last") app-cta3 app-cta3-text-image text-dark @pres.TextAlignment @pres.TextVAlignment'>
 			@if(pres.HeadingType != "hide") {
-				@Tag.Custom(pres.HeadingType, Content.Title)
+				@Kit.HtmlTags.Custom(pres.HeadingType, Content.Title)
 			}
 			@if(Text.Has(Content.Text)) {
 				<div class="app-cta3-text">
