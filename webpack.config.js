@@ -9,6 +9,7 @@ module.exports = (env) => {
     },
     output: {
       path: path.resolve(__dirname, `${env.style}/dist`),
+      assetModuleFilename: 'images/[hash][ext][query]'
     },
     mode: 'production',
     devtool: 'source-map',
@@ -70,12 +71,7 @@ module.exports = (env) => {
         },
         {
           test: /\.(png|jpe?g|gif)$/,
-          use: [{
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images/'
-            }
-          }]
+          type: 'asset/resource'
         }
       ],
     },

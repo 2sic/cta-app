@@ -1,5 +1,7 @@
 {
   "name": "app-cta",
+  "version": "",
+  "description": "The standard App for 2sic to use as CTA.",
   "main": "",
   "scripts": {
     "build-bs4": "webpack --env style=bs4",
