@@ -5,8 +5,8 @@
   /* This is a partial template which is re-used in the Content-Templates */
 
   // Parameter passed in from the calling page - if we don't have an image, exit
-  var imgItem = DynamicModel.Item;  // The content-item with the image
-  var contentItem = DynamicModel.Content;
+  var contentItem = DynamicModel.Item;    // The content-item with the image
+  var imgItem = contentItem.Presentation;
   if (!Text.Has(imgItem.BackgroundImage)) { return; }
 
   // Figure out width of the image based on max-width of a content-image and 12 Bootstrap Columns

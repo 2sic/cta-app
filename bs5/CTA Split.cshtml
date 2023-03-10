@@ -1,42 +1,47 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@* File is only for BS5 *@
+@* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  	var isTextFirst = Settings.TextFirst;
-	var colsText = isTextFirst ? Settings.ColsElement : 12 - Settings.ColsElement;
-  	var colsImg = 12 - colsText;
+  var isTextFirst = Settings.TextFirst;
+  var colsText = isTextFirst ? Settings.ColsElement : 12 - Settings.ColsElement;
+  var colsImg = 12 - colsText;
   
-	var pres = Content.Presentation;
-  	// Toolbar for the Button, when is not de a Demo Item you can Edit 
-	var btnToolbar = Kit.Toolbar.Empty().Edit().Condition(!Content.IsDemoItem);
+  var pres = Content.Presentation;
+  
+  // Toolbar for the Button, when is not de a Demo Item you can Edit 
+  var btnToolbar = Content.IsDemoItem
+    ? Kit.Toolbar.Empty().Info(note: Resources.Toolbar.IsDemoSubItem)
+    : Kit.Toolbar.Empty().Edit();
 }
 
 <div class='app-cta3-wrapper mb-4' @Kit.Toolbar.Default(Content)> 
-	<div class="row">
-		<div class='col-md-@colsText order-md-@(isTextFirst ? "first" : "last") app-cta3 app-cta3-text-image text-dark @pres.TextAlignment @pres.TextVAlignment'>
-			@if (pres.HeadingType != "hide") {
-				@Kit.HtmlTags.Custom(pres.HeadingType, Content.Title)
-			}
-			@if (Text.Has(Content.Text)) {
-				<div class="app-cta3-text">
-					@Html.Raw(Content.Text)
-				</div>
-			}
+  <div class="row">
+    <div class='col-md-@colsText order-md-@(isTextFirst ? "first" : "last") app-cta3 app-cta3-text-image text-dark @pres.TextAlignment @pres.TextVAlignment'>
+      @if (pres.HeadingType != "hide") {
+        @Kit.HtmlTags.Custom(pres.HeadingType, Content.Title)
+      }
+      @if (Text.Has(Content.Text)) {
+        <div class="app-cta3-text">
+          @Html.Raw(Content.Text)
+        </div>
+      }
 
-			<div class="app-cta3-buttons">
-				@foreach (var btn in Content.Buttons) {
-					<a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget" @btnToolbar.For(btn)>
-						@btn.ButtonText
-					</a>
-				}
-			</div>
-		</div>
-		@* If the image has it's own column, it's here *@
-		@if (colsImg != 0) {
-			<div class='col-md-@colsImg order-md-@(!isTextFirst ? "first" : "last")'>
-				@* call sub-template to show the image with all possible options *@
-        		@Html.Partial("Text and Image.Part-Image.cshtml", new { Content = Content, Item = pres, Columns = colsImg})
-			</div>
-		}
-	</div>
+      <div class="app-cta3-buttons">
+        @foreach (var btn in Content.Buttons) {
+          <a href="@btn.ButtonLink" class="btn app-cta3-btn" target="@btn.ButtonTarget" @btnToolbar.For(btn)>
+            @btn.ButtonText
+          </a>
+        }
+      </div>
+    </div>
+    @* If the image has it's own column, it's here *@
+    @if (colsImg != 0) {
+      <div class='col-md-@colsImg order-md-@(!isTextFirst ? "first" : "last")'>
+        @* call sub-template to show the image with all possible options *@
+            @Html.Partial("CTA Split.Part Image.cshtml", new { Item = Content, Columns = colsImg })
+      </div>
+    }
+  </div>
 </div>
+
+@Html.Partial("Assets.cshtml")
