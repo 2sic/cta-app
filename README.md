@@ -11,17 +11,16 @@ A Call-To-Action App to motivate customer interaction
 | 2sxc                | ✅    | requires 2sxc v15.04
 | Dnn                 | ✅    | For v7, v8 and v9
 | Oqtane 2            | ✅    | Requires v3.01+
-| No jQuery           | ✅    | 
+| No jQuery           | ✅    |
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/wwLfP_ve) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
 | App Catalog         | ➖    | See [app catalog](https://2sxc.org/en/apps/app/cta-v3-for-dnn-and-oqtane)
 | Screenshots         | ➖    | See [app catalog](https://2sxc.org/en/apps/app/cta-v3-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v13.10 conventions
-| Bootstrap 3         | ✔️    | 
+| Bootstrap 3         | ✔️    |
 | Bootstrap 4         | ✅    |
 | Bootstrap 5         | ✅    |
-
 
 ## Customize the App
 
@@ -29,26 +28,26 @@ The Counter App doesn't use any app settings or app resources.
 
 If you want to customize the CSS, you will usually follow the ["Create Custom Styles in a Standard 2sxc App" checklist](https://azing.org/2sxc/r/gg_aB9FD)
 
-
 ## History
 
 * v03.00.00 2021-10
-    * Updated to best-practices of 2sxc 12.05
-    * Hybrid, so it works with Oqtane
-    * Tested to look ok on Bootstrap5
-* v03.01.00 2022-01 
-    * Enabled ajax-reload
-    * Set default view
-    * Updated License
-* v03.02.00 2022-04 
-    * Changed Services to ToSic.Sxc.Services
-    * Activated image configuration
-* v03.03.00 2022-06 
-    * Replaced all base classes with their 2sxc 14 equivalent
-    * Removed all GetService<> and used the new ServiceKit14
-    * Changed all toolbars to use the new IToolbarService
-* v.03.04.00 2023-02
-    * Replaced Tag.Custom with `Kit.HtmlTags`
-    * Enhanced Kit.Image with `imgAltFallback`
-    * Removed _ from Filenames
-    * Code in one file the bs5, less duplicated code
+  * Updated to best-practices of 2sxc 12.05
+  * Hybrid, so it works with Oqtane
+  * Tested to look ok on Bootstrap5
+* v03.01.00 2022-01
+  * Enabled ajax-reload
+  * Set default view
+  * Updated License
+* v03.02.00 2022-04
+  * Changed Services to ToSic.Sxc.Services
+  * Activated image configuration
+* v03.03.00 2022-06
+  * Replaced all base classes with their 2sxc 14 equivalent
+  * Removed all GetService<> and used the new ServiceKit14
+  * Changed all toolbars to use the new IToolbarService
+* v.03.04.00 2023-03
+  * Replaced Tag.Custom with `Kit.HtmlTags`
+  * Enhanced Kit.Image with `imgAltFallback`
+  * Removed _ from Filenames
+  * Code in one file the bs5, less duplicated code
+  * Add special toolbar for is-demo items

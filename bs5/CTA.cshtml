@@ -6,7 +6,7 @@
   
   // Toolbar for the Button, when is not de a Demo Item you can Edit 
   var btnToolbar = Content.IsDemoItem
-    ? Kit.Toolbar.Empty().Info(note: Resources.Toolbar.IsDemoSubItem)
+    ? Kit.Toolbar.Empty().Info(tweak: b => b.Note(Resources.Toolbar.IsDemoSubItem))
     : Kit.Toolbar.Empty().Edit();
 
   // only show the pattern if no image is given

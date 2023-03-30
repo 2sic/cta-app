@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="15.03.00" ExportDate="2023-02-21T08:48:21.0497437+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="15.07.00" ExportDate="2023-03-30T10:14:05.9573953+02:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -1076,10 +1076,10 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="3.1" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="03.04" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="15.03.00" Type="String">
+      <Value Key="RequiredVersion" Value="15.07.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1123,10 +1123,7 @@
       </Value>
     </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-Template" AttributeSetName="2SexyContent-Template" EntityGUID="98a389fd-865a-4771-ac5a-c79f40760677" Json="True">
-      <Value Key="ContentDemoEntity" Value="eb2bb41e-fc6d-4637-8c10-99a53c6f79ad" Type="Entity">
-        <Dimension DimensionID="144" ReadOnly="false" />
-        <Dimension DimensionID="143" ReadOnly="false" />
-      </Value>
+      <Value Key="ContentDemoEntity" Value="eb2bb41e-fc6d-4637-8c10-99a53c6f79ad" Type="Entity" />
       <Value Key="ContentTypeStaticName" Value="d2366d22-3f83-4ac6-b831-29f470205ee4" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
@@ -1341,8 +1338,11 @@
       <Value Key="Location" Value="Site" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Name" Value="CTA Image Text" Type="String">
+      <Value Key="Name" Value="CTA Image | Text" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="CTA Bild | Text" Type="String">
+        <Dimension DimensionID="144" ReadOnly="false" />
       </Value>
       <Value Key="Path" Value="bs5/CTA Split.cshtml" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
@@ -1448,8 +1448,11 @@
       <Value Key="Location" Value="Site" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Name" Value="CTA Text Image" Type="String">
+      <Value Key="Name" Value="CTA Text | Image" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Name" Value="CTA Text | Bild" Type="String">
+        <Dimension DimensionID="144" ReadOnly="false" />
       </Value>
       <Value Key="Path" Value="bs5/CTA Split.cshtml" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
@@ -1506,7 +1509,7 @@
       <Value Key="BackgroundImage" Value="file:6128" Type="Hyperlink">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="BackgroundType" Value="" Type="String">
+      <Value Key="BackgroundType" Value="app-cta3-background-primary" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="HeadingType" Value="h2" Type="String">
@@ -1551,6 +1554,67 @@
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="UrlParametersCaseSensitive" Value="False" Type="Boolean">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="5" AssignmentObjectType="ContentType" AttributeSetStaticName="ContentType" AttributeSetName="ContentType" EntityGUID="2b4a8369-73b7-4e46-b573-1d51c82a2567" Json="True" KeyString="d2366d22-3f83-4ac6-b831-29f470205ee4">
+      <Value Key="AdditionalSettings" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Description" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="DynamicChildrenField" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="EditInstructions" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Icon" Value="" Type="Hyperlink">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Label" Value="CTA (Call to Action)" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Link" Value="" Type="Hyperlink">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="ListInstructions" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Notes" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="5" AssignmentObjectType="ContentType" AttributeSetStaticName="ContentType" AttributeSetName="ContentType" EntityGUID="684bad54-a6f0-40ab-8536-2a4d6508bc6e" Json="True" KeyString="761f827e-7e0a-430b-8398-6a32a3286430">
+      <Value Key="AdditionalSettings" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Description" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="DynamicChildrenField" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="EditInstructions" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Icon" Value="" Type="Hyperlink">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Label" Value="CTA Visualization" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Label" Value="CTA Visualisierung" Type="String">
+        <Dimension DimensionID="144" ReadOnly="false" />
+      </Value>
+      <Value Key="Link" Value="" Type="Hyperlink">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="ListInstructions" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Notes" Value="" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
     </Entity>
