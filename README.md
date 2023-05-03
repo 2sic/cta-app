@@ -45,9 +45,10 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Replaced all base classes with their 2sxc 14 equivalent
   * Removed all GetService<> and used the new ServiceKit14
   * Changed all toolbars to use the new IToolbarService
-* v.03.04.00 2023-03
+* v03.04.00 2023-03
   * Replaced Tag.Custom with `Kit.HtmlTags`
   * Enhanced Kit.Image with `imgAltFallback`
+  * Replace Edit.Toolbar with `@Kit.Toolbar.Default`
   * Removed _ from Filenames
   * Code in one file the bs5, less duplicated code
   * Add special toolbar for is-demo items
