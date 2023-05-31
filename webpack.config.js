@@ -9,7 +9,7 @@ module.exports = (env) => {
     },
     output: {
       path: path.resolve(__dirname, `${env.style}/dist`),
-      assetModuleFilename: 'images/[hash][ext][query]'
+      assetModuleFilename: 'images/[name][ext][query]'
     },
     mode: 'production',
     devtool: 'source-map',
