@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.00.00" ExportDate="2023-05-03T13:45:09.5092497+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.01.01" ExportDate="2023-05-31T12:25:01.494916+02:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -1085,7 +1085,7 @@
       <Value Key="RequiredOqtaneVersion" Value="03.04" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.00.00" Type="String">
+      <Value Key="RequiredVersion" Value="16.02.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1093,7 +1093,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.04.00" Type="String">
+      <Value Key="Version" Value="03.05.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1101,7 +1101,7 @@
     <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="944b418d-aebb-4227-a3f4-63c495c185f2" KeyNumber="166" />
     <Entity TargetType="3" AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="cebe4a39-7541-42f0-b913-8e4a9dffd686" KeyNumber="166" />
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="d6fcb920-d092-4b4d-8eea-7e23361de827" AttributeSetName="Button" EntityGUID="931dae44-c997-4367-84d3-9edbc08e1b7c">
-      <Value Key="ButtonLink" Value="/" Type="Hyperlink">
+      <Value Key="ButtonLink" Value="https://2sxc.org/" Type="Hyperlink">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1275,6 +1275,9 @@
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="TextColor" Value="text-dark" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="TextVAlignment" Value="align-self-start" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
     </Entity>

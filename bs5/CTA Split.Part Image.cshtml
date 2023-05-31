@@ -1,19 +1,22 @@
 @inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
+@using ToSic.Sxc.Data;
 @* File is only for BS5 *@
 @{
   /* This is a partial template which is re-used in the Content-Templates */
 
   // Parameter passed in from the calling page - if we don't have an image, exit
-  var contentItem = DynamicModel.Item;    // The content-item with the image
-  var imgItem = contentItem.Presentation;
-  if (!Text.Has(imgItem.BackgroundImage)) { return; }
+  var ctaMain = DynamicModel.CtaMain as ITypedItem;
+  var ctaPres = ctaMain.Presentation;
+
+  // Only continue if we have a background image
+  if (!Text.Has(ctaPres.String("BackgroundImage"))) { return; }
 
   // Figure out width of the image based on max-width of a content-image and 12 Bootstrap Columns
   // The resulting value will be something like "12/12" or "4/12" which is used by the Link.Image(...)
-  var resizeFactor = (DynamicModel.Columns ?? 12) + "/12";
+  var resizeFactor = (DynamicModel.ColsImg ?? 12) + "/12";
 }
 
 <figure>
-  @Kit.Image.Picture(imgItem.Field("BackgroundImage"), settings: "Content", factor: resizeFactor, imgAltFallback: contentItem.Title)
+  @Kit.Image.Picture(ctaPres.Field("BackgroundImage"), settings: "Content", factor: resizeFactor, imgAltFallback: ctaMain.String("Title"))
 </figure>
