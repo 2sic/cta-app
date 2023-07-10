@@ -1,18 +1,16 @@
-@inherits Custom.Hybrid.Razor14
+@inherits Custom.Hybrid.RazorPro
 @using ToSic.Razor.Blade;
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
-  var isTextFirst = Settings.Bool("TextFirst");
-  var colsText = isTextFirst ? Settings.ColsElement : 12 - Settings.ColsElement;
+  var isTextFirst = AllSettings.Bool("TextFirst");
+  var colsText = isTextFirst ? AllSettings.Int("ColsElement") : 12 - AllSettings.Int("ColsElement");
   var colsImg = 12 - colsText;
   
-  var ctaMain = AsTyped(Data.MyContent);
+  var ctaMain = MyItem;
   var ctaPres = ctaMain.Presentation;
   
-  // Toolbar for the Button, when is not de a Demo Item you can Edit 
-  var btnToolbar = ctaMain.IsDemoItem
-    ? Kit.Toolbar.Empty().Info(tweak: b => b.Note(Resources.Toolbar.IsDemoSubItem))
-    : Kit.Toolbar.Empty().Edit();
+  // Toolbar for the Button, when is not a Demo Item you can Edit 
+  var btnToolbar = Kit.Toolbar.Empty().DetectDemo(ctaMain).Edit();
 }
 
 <div class='app-cta3-wrapper mb-4' @Kit.Toolbar.Default(ctaPres)> 
