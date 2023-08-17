@@ -16,5 +16,5 @@
   var resizeFactor = MyModel.Int("ColsImg", fallback: 12) + "/12";
 }
 <figure>
-  @Kit.Image.Picture(ctaPres.Field("BackgroundImage"), settings: "Content", factor: resizeFactor, imgAltFallback: ctaMain.String("Title"))
+  @ctaPres.Picture("BackgroundImage", settings: "Content", factor: resizeFactor, imgAltFallback: ctaMain.String("Title"))
 </figure>
