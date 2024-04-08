@@ -8,7 +8,7 @@ A Call-To-Action App to motivate customer interaction
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v16.04
+| 2sxc                | ✅    | requires 2sxc v17.06.02
 | Dnn                 | ✅    | For v9.6.1+
 | Oqtane 2            | ✅    | Requires v04.00+
 | No jQuery           | ✅    |
@@ -55,3 +55,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 * v03.05.00 2023-06
   * Upgraded to conventions 16.02
   * Changed all code to be typed
+* v03.05.17 2024-04
+  * strong Typed

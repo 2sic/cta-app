@@ -1,17 +1,18 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor<CTAContent>
+@using ToSic.Razor.Blade
+@using AppCode.Data
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
   // Main CTA configuration
-  var ctaMain = MyItem;
+  var ctaMain = As<CTAContent>(MyItem);
   var ctaPres = ctaMain.Presentation;
   
   // Toolbar for the Button, when is not a Demo Item you can Edit 
   var btnToolbar = Kit.Toolbar.Empty().DetectDemo(ctaMain).Edit();
 
   // only show the pattern if no image is given
-  var bgImg = ctaPres.Url("BackgroundImage");
-  var bgPatternStyle = Text.Has(bgImg) ? "" : ctaPres.String("BackgroundType");
+  var bgImg = ctaPres.BackgroundImage;
+  var bgPatternStyle = Text.Has(bgImg) ? "" : ctaPres.BackgroundType;
 
   // set background image styling if image is given 
   var bgImageStyle = Text.Has(bgImg)
@@ -22,22 +23,22 @@
 <div class='app-cta3-wrapper mb-4 @bgPatternStyle' style='@bgImageStyle' @Kit.Toolbar.Default(ctaMain)>
   <div class="backgroundimage-overlay" style='display: @(ctaPres.Bool("ShowImageOverlay") ? "block" : "none")'></div>
   <div class="row">
-    <div class='col-lg-8 offset-lg-2 app-cta3 @ctaPres.String("TextColor") @ctaPres.String("TextAlignment")'>
+    <div class='col-lg-8 offset-lg-2 app-cta3 @ctaPres.TextColor @ctaPres.TextAlignment'>
       @* Optionally show title *@
-      @if (ctaPres.String("HeadingType") != "hide") {
-        @ctaMain.Html("Title", container: ctaPres.String("HeadingType"))
+      @if (ctaPres.HeadingType != "hide") {
+        @ctaMain.Html("Title", container: ctaPres.HeadingType)
       }
 
       @* Optionally show text inside a div *@
-      @if (Text.Has(ctaMain.String("Text"))) {
+      @if (ctaMain.IsNotEmpty("Text")) {
         @ctaMain.Html("Text", container: Kit.HtmlTags.Div().Class("app-cta3-text"))
       }
 
       @* Show all buttons *@
       <div class="app-cta3-buttons">
-        @foreach (var btn in ctaMain.Children("Buttons")) {
-          <a href='@btn.Url("ButtonLink")' class="btn app-cta3-btn" target='@btn.String("ButtonTarget")' @btnToolbar.For(btn)>
-            @btn.String("ButtonText")
+        @foreach (var btn in ctaMain.Buttons) {
+          <a href='@btn.ButtonLink' class="btn app-cta3-btn" target='@btn.ButtonTarget' @btnToolbar.For(btn)>
+            @btn.ButtonText
           </a>
         }
       </div>

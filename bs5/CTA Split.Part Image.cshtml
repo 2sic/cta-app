@@ -1,10 +1,12 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
 @* File is only for BS5 *@
 @{
   /* This is a partial template which is re-used in other Templates */
 
   // Parameter passed in from the calling page - if we don't have an image, exit
+  @* TODO:: *@
   var ctaMain = MyModel.Item("CtaMain");
   var ctaPres = ctaMain.Presentation;
 

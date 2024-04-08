@@ -1,12 +1,13 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
   var isTextFirst = AllSettings.Bool("TextFirst");
   var colsText = isTextFirst ? AllSettings.Int("ColsElement") : 12 - AllSettings.Int("ColsElement");
   var colsImg = 12 - colsText;
   
-  var ctaMain = MyItem;
+  var ctaMain = As<CTAContent>(MyItem);
   var ctaPres = ctaMain.Presentation;
   
   // Toolbar for the Button, when is not a Demo Item you can Edit 
@@ -15,22 +16,22 @@
 
 <div class='app-cta3-wrapper mb-4' @Kit.Toolbar.Default(ctaPres)> 
   <div class="row">
-    <div class='col-md-@colsText order-md-@(isTextFirst ? "first" : "last") app-cta3 app-cta3-text-image text-dark @ctaPres.String("TextAlignment") @ctaPres.String("TextVAlignment")'>
+    <div class='col-md-@colsText order-md-@(isTextFirst ? "first" : "last") app-cta3 app-cta3-text-image text-dark @ctaPres.TextAlignment @ctaPres.TextVAlignment'>
       @* Optionally show title *@
-      @if (ctaPres.String("HeadingType") != "hide") {
-        @ctaMain.Html("Title", container: ctaPres.String("HeadingType"))
+      @if (ctaPres.HeadingType != "hide") {
+        @ctaMain.Html("Title", container: ctaPres.HeadingType)
       }
 
       @* Optionally show text inside a div *@
-      @if (Text.Has(ctaMain.String("Text"))) {
+      @if (ctaMain.IsNotEmpty("Text")) {
         @ctaMain.Html("Text", container: Kit.HtmlTags.Div().Class("app-cta3-text"))
       }
 
       @* Show all buttons *@
       <div class="app-cta3-buttons">
-        @foreach (var btn in ctaMain.Children("Buttons")) {
-          <a href='@btn.Url("ButtonLink")' class="btn app-cta3-btn" target='@btn.String("ButtonTarget")' @btnToolbar.For(btn)>
-            @btn.String("ButtonText")
+        @foreach (var btn in ctaMain.Buttons) {
+          <a href='@btn.ButtonLink' class="btn app-cta3-btn" target='@btn.ButtonTarget' @btnToolbar.For(btn)>
+            @btn.ButtonText
           </a>
         }
       </div>
