@@ -7,7 +7,5 @@ namespace AppCode.Data
         public new PresentationSettings Presentation => _presentation ??= As<PresentationSettings>(base.Presentation);
         private PresentationSettings _presentation;
 
-        public int ColsImg => _item.Int("colsImg");
-
     }
 }

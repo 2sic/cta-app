@@ -6,17 +6,16 @@
   /* This is a partial template which is re-used in other Templates */
 
   // Parameter passed in from the calling page - if we don't have an image, exit
-  @* TODO:: *@
-  var ctaMain = MyModel.Item("CtaMain");
+  var ctaMain = As<CTAContent>(MyModel.Item("CtaMain"));
   var ctaPres = ctaMain.Presentation;
 
   // Only continue if we have a background image
-  if (!Text.Has(ctaPres.String("BackgroundImage"))) { return; }
+  if (!ctaPres.IsNotEmpty("BackgroundImage")) { return; }
 
   // Figure out width of the image based on max-width of a value-image and 12 Bootstrap Columns
   // The resulting value will be something like "12/12" or "4/12" which is used by the Link.Image(...)
   var resizeFactor = MyModel.Int("ColsImg", fallback: 12) + "/12";
 }
 <figure>
-  @ctaPres.Picture("BackgroundImage", settings: "Content", factor: resizeFactor, imgAltFallback: ctaMain.String("Title"))
+  @ctaPres.Picture("BackgroundImage", settings: "Content", factor: resizeFactor, imgAltFallback: ctaMain.Title)
 </figure>
