@@ -1,6 +1,6 @@
 namespace AppCode.Data
 {
-    public partial class CTAContent
+    public partial class CtaContent
     {
         // Add your own properties and methods here
 

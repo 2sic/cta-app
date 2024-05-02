@@ -11,10 +11,10 @@ namespace AppCode.Data
 }
 */
 
-// Generator:   CSharpDataModelsGenerator v17.06.02
+// Generator:   CSharpDataModelsGenerator v17.06.04
 // App/Edition: Call To Action/
 // User:        2sic Web-Developer
-// When:        2024-04-08 07:15:28Z
+// When:        2024-04-24 06:57:08Z
 namespace AppCode.Data
 {
   // This is a generated class for AppResources (scope: System.App)
@@ -22,7 +22,7 @@ namespace AppCode.Data
 
   /// <summary>
   /// AppResources data. <br/>
-  /// Generated 2024-04-08 07:15:28Z. Re-generate whenever you change the ContentType. <br/>
+  /// Generated 2024-04-24 06:57:08Z. Re-generate whenever you change the ContentType. <br/>
   /// <br/>
   /// Default properties such as `.Title` or `.Id` are provided in the base class. <br/>
   /// Most properties have a simple access, such as `.`. <br/>
