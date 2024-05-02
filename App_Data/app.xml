@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-26T07:36:45.4556707+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="17.07.00" ExportDate="2024-05-02T10:30:55.9831207+02:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -257,7 +257,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" Name="CTA Content" Scope="Default" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" Name="CtaContent" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="f1f16c97-b6ad-4e9c-ab0c-bc52cb9a8a16" Json="True" KeyNumber="5638">
@@ -1058,6 +1058,9 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
+      <Value Key="DebugLog" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
@@ -1082,10 +1085,10 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="03.04.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="04.00.00" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.04.00" Type="String">
+      <Value Key="RequiredVersion" Value="17.07.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1093,7 +1096,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.05.00" Type="String">
+      <Value Key="Version" Value="03.17.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1117,7 +1120,7 @@
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" AttributeSetName="CTA Content" EntityGUID="eb2bb41e-fc6d-4637-8c10-99a53c6f79ad">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" AttributeSetName="CtaContent" EntityGUID="eb2bb41e-fc6d-4637-8c10-99a53c6f79ad">
       <Value Key="Buttons" Value="931dae44-c997-4367-84d3-9edbc08e1b7c,793a65e2-c199-4519-aee8-d686cf916bad" Type="Entity" />
       <Value Key="Text" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
@@ -1226,7 +1229,7 @@
       <Value Key="Presentation" Value="c17d11c7-7c41-43d7-82c8-749537a89e68" Type="Entity" />
       <Value Key="Template" Value="98a389fd-865a-4771-ac5a-c79f40760677" Type="Entity" />
     </Entity>
-    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" AttributeSetName="CTA Content" EntityGUID="cbaebc5e-8948-491e-bfd4-2badbbe642ac">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" AttributeSetName="CtaContent" EntityGUID="cbaebc5e-8948-491e-bfd4-2badbbe642ac">
       <Value Key="Buttons" Value="931dae44-c997-4367-84d3-9edbc08e1b7c,793a65e2-c199-4519-aee8-d686cf916bad" Type="Entity" />
       <Value Key="Text" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
@@ -1501,7 +1504,7 @@
       <Value Key="Presentation" Value="4abb048d-f291-4242-90d4-182f10a3147d" Type="Entity" />
       <Value Key="Template" Value="1592e1aa-1224-4de9-aab9-7a03bef36796" Type="Entity" />
     </Entity>
-    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" AttributeSetName="CTA Content" EntityGUID="b173a3d6-8fdd-4591-a890-50fa9deac1d6">
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="d2366d22-3f83-4ac6-b831-29f470205ee4" AttributeSetName="CtaContent" EntityGUID="b173a3d6-8fdd-4591-a890-50fa9deac1d6">
       <Value Key="Buttons" Value="931dae44-c997-4367-84d3-9edbc08e1b7c,793a65e2-c199-4519-aee8-d686cf916bad" Type="Entity" />
       <Value Key="Text" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
