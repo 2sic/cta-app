@@ -5,7 +5,7 @@
 @Kit.Page.Activate(condition: Kit.Css.IsUnknown, features: "Bootstrap5")
 
 @* Include styles of the App *@
-@if(Kit.Css.Is("bs5")) {
+@if (Kit.Css.Is("bs5")) {
   <link rel="stylesheet" href="@MyView.Folder.Url/theme/theme.css" @Kit.Page.AssetAttributes()/>
 }
 
