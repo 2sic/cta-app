@@ -1,43 +1,45 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using ToSic.Sxc.Data
+@using AppCode.Data
 @* --- This is the Bootstrap5 Edition of the Files --- *@
 @{
   // Main CTA configuration
-  var ctaMain = MyItem;
-  var ctaPres = ctaMain.Presentation;
+  var cta = As<CtaContent>(MyItem);
+  var pres = cta.Presentation;
   
   // Toolbar for the Button, when is not a Demo Item you can Edit 
-  var btnToolbar = Kit.Toolbar.Empty().DetectDemo(ctaMain).Edit();
+  var btnToolbar = Kit.Toolbar.Empty().DetectDemo(cta).Edit();
 
-  // only show the pattern if no image is given
-  var bgImg = ctaPres.Url("BackgroundImage");
-  var bgPatternStyle = Text.Has(bgImg) ? "" : ctaPres.String("BackgroundType");
-
-  // set background image styling if image is given 
-  var bgImageStyle = Text.Has(bgImg)
-    ? "background-image: url('" + Link.Image(bgImg, AllSettings.String("Images.Section"), height: 0) + "')"
+  // If we have a background image, use that, otherwise a CSS pattern
+  var hasBgImg = pres.IsNotEmpty("BackgroundImage");
+  var bgPatternStyle =  hasBgImg ? "" : pres.BackgroundType;
+  var bgImageStyle = hasBgImg
+    ? "background-image: url('" + Link.Image(pres.BackgroundImage, settings: "Section", height: 0) + "')"
     : "";
 }
 
-<div class='app-cta3-wrapper mb-4 @bgPatternStyle' style='@bgImageStyle' @Kit.Toolbar.Default(ctaMain)>
-  <div class="backgroundimage-overlay" style='display: @(ctaPres.Bool("ShowImageOverlay") ? "block" : "none")'></div>
+@* Wrapper with backround image *@
+<div class='app-cta3-wrapper mb-4 @bgPatternStyle' style='@bgImageStyle' @Kit.Toolbar.Default(cta)>
+  <div class="backgroundimage-overlay" style='display: @(pres.Bool("ShowImageOverlay") ? "block" : "none")'></div>
   <div class="row">
-    <div class='col-lg-8 offset-lg-2 app-cta3 @ctaPres.String("TextColor") @ctaPres.String("TextAlignment")'>
+    <div class='col-lg-8 offset-lg-2 app-cta3 @pres.TextColor @pres.TextAlignment'>
       @* Optionally show title *@
-      @if (ctaPres.String("HeadingType") != "hide") {
-        @ctaMain.Html("Title", container: ctaPres.String("HeadingType"))
+      @if (pres.HeadingType != "hide") {
+        @cta.Html("Title", container: pres.HeadingType)
       }
 
       @* Optionally show text inside a div *@
-      @if (Text.Has(ctaMain.String("Text"))) {
-        @ctaMain.Html("Text", container: Kit.HtmlTags.Div().Class("app-cta3-text"))
+      @if (cta.IsNotEmpty("Text")) {
+        @cta.Html("Text", container: Kit.HtmlTags.Div().Class("app-cta3-text"))
       }
 
       @* Show all buttons *@
       <div class="app-cta3-buttons">
-        @foreach (var btn in ctaMain.Children("Buttons")) {
-          <a href='@btn.Url("ButtonLink")' class="btn app-cta3-btn" target='@btn.String("ButtonTarget")' @btnToolbar.For(btn)>
-            @btn.String("ButtonText")
+        @foreach (var btn in cta.Buttons)
+        {
+          <a href='@btn.ButtonLink' class="btn app-cta3-btn" target='@btn.ButtonTarget' @btnToolbar.For(btn)>
+            @btn.ButtonText
           </a>
         }
       </div>
