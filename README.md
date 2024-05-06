@@ -56,4 +56,6 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Upgraded to conventions 16.02
   * Changed all code to be typed
 * v03.17.00 2024-04
-  * strong Typed
+  * Strong Typed
+  * Auto Generated Class
+  * Typed MyItem
