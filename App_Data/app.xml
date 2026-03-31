@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="18.00.00" ExportDate="2024-07-25T07:04:21.5282618+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="21.06.00" ExportDate="2026-03-31T15:03:36.0655247+02:00">
   <Header>
     <App Guid="306d9c22-4369-4721-a5c2-040c629de795" />
     <Language Default="en-us" />
@@ -1088,7 +1088,7 @@
       <Value Key="RequiredOqtaneVersion" Value="05.00.00" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="17.07.00" Type="String">
+      <Value Key="RequiredVersion" Value="21.05.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1096,7 +1096,7 @@
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.17.01" Type="String">
+      <Value Key="Version" Value="03.21.00" Type="String">
         <Dimension DimensionID="144" ReadOnly="false" />
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
@@ -1627,6 +1627,23 @@
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
       <Value Key="Notes" Value="" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="3ea2e67b-d3e2-49d3-a901-271295fe54d4" Json="True">
+      <Value Key="Template" Value="1592e1aa-1224-4de9-aab9-7a03bef36796" Type="Entity" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="876ccbd7-66e3-4a3a-9757-08a06d571422" Json="True">
+      <Value Key="Template" Value="98a389fd-865a-4771-ac5a-c79f40760677" Type="Entity" />
+    </Entity>
+    <Entity TargetType="4" AssignmentObjectType="Entity" AttributeSetStaticName="5e958dc6-2922-4d68-835c-7b9711538b12" AttributeSetName="NoteDecorator" EntityGUID="9cb2cbf0-07f1-4a11-bc98-b87633c21974" Json="True" KeyGuid="b173a3d6-8fdd-4591-a890-50fa9deac1d6">
+      <Value Key="Note" Value="&lt;p&gt;check out this CTA!&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="NoteType" Value="note" Type="String">
+        <Dimension DimensionID="143" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="check out this CTA!" Type="String">
         <Dimension DimensionID="143" ReadOnly="false" />
       </Value>
     </Entity>
