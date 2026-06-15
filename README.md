@@ -61,3 +61,7 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Typed MyItem
 * v03.17.01 2024-07
   * Update app.sln and app.csproj
+* v03.21.00 2026-03
+  * Added intellisense Extensions for Visual Studio Code
+* v03.21.01 2026-06
+  * Switched from webpack to Vite for faster builds 
