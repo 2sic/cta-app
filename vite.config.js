@@ -87,6 +87,14 @@ export default defineConfig({
         if (postcssResult.map) {
           this.emitFile({ type: 'asset', fileName: 'styles.min.css.map', source: postcssResult.map.toString() });
         }
+
+        // This app has no JavaScript. Do not publish Vite's empty entry chunk.
+        for (const [fileName, output] of Object.entries(bundle)) {
+          if (output.type === 'chunk' && output.code.trim() === '') {
+            delete bundle[fileName];
+            delete bundle[`${fileName}.map`];
+          }
+        }
       },
     }
   ],
